@@ -1,9 +1,34 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Button } from 'react-bootstrap';
 import Table from 'react-bootstrap/Table';
 import ItemProducto from './ItemProducto';
 
 const AdministrarProductos = () => {
+
+    const URL = process.env.REACT_APP_API_SERVER;
+    const [productos, setProductos] = useState([])
+
+    useEffect(() => {
+        consultarAPI();
+    }, [])
+
+    const consultarAPI = async () => {
+
+        try {
+            // Codigo que quiero ejecutar
+            // Peticion get
+            const respuesta = await fetch(URL);
+            const listaProductos = await respuesta.json(); 
+            setProductos(listaProductos);
+
+        } catch (error) {
+            console.log(error)
+            // Mensage intuitivo para el usuario
+        }
+
+    }
+    
+
     return (
         <section className='container'>
             <div className='d-flex justify-content-between align-items-center mt-5'>
@@ -25,7 +50,10 @@ const AdministrarProductos = () => {
                 </thead>
 
                 <tbody>
-                    <ItemProducto></ItemProducto>
+                    {
+                        productos.map((producto) => <ItemProducto key={producto.id} producto={producto}></ItemProducto>)
+                    }
+                    
                 </tbody>
 
             </Table>
