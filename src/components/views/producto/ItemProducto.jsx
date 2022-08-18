@@ -2,7 +2,6 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 const ItemProducto = () => {
     return (
-        <div>
             <tr>
                 <td>1</td>
                 <td>cafe</td>
@@ -14,7 +13,6 @@ const ItemProducto = () => {
                     <Button variant='danger'>Borrar</Button>
                 </td>
             </tr>
-        </div>
     );
 };
 

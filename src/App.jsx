@@ -2,9 +2,9 @@ import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css"
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Home from "./components/views/Home";
-import AdministrarProductos from "./components/views/AdministrarProductos"
-import CrearProducto from "./components/views/CrearProducto"
-import EditarProductos from "./components/views/EditarProductos"
+import AdministrarProductos from "./components/views/producto/AdministrarProductos"
+import CrearProducto from "./components/views/producto/CrearProducto"
+import EditarProductos from "./components/views/producto/EditarProductos"
 import Error404 from './components/views/Error404';
 import Menu from "./components/common/Menu";
 import Footer from "./components/common/Footer";
