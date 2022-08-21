@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import { Button } from 'react-bootstrap';
 import Table from 'react-bootstrap/Table';
 import ItemProducto from './ItemProducto';
 import {Link} from "react-router-dom"
