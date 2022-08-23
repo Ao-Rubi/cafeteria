@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
 import Alert from 'react-bootstrap/Alert';
 import { cantidadCaracteres, validarPrecio, validarImagen } from './helpers';
 import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
 
 
 const CrearProducto = () => {
@@ -16,6 +17,9 @@ const CrearProducto = () => {
 
     // Variable de entorno
     const URL = process.env.REACT_APP_API_SERVER
+
+    // Inicializar useNavigate
+    const navegacion = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -50,6 +54,9 @@ const CrearProducto = () => {
                         'El producto fue agregado correctamente',
                         'success'
                     )
+
+                    // Redirecciono a la pagina de administrar
+                    navegacion("/administrar")
                 }
 
                 console.log(respuesta)

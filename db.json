@@ -41,6 +41,13 @@
       "imagen": "https://ordr.issou.best/",
       "categoria": "salado",
       "id": 6
+    },
+    {
+      "nombreProducto": "Te",
+      "precio": "300",
+      "imagen": "https://ordr.issou.best/",
+      "categoria": "bebida-caliente",
+      "id": 7
     }
   ]
 }
