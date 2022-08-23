@@ -8,27 +8,6 @@
       "id": 1
     },
     {
-      "nombreProducto": "Licuado",
-      "precio": "600",
-      "imagen": "https://...",
-      "categoria": "bebida-fria",
-      "id": 2
-    },
-    {
-      "nombreProducto": "Medialuna",
-      "precio": "150",
-      "imagen": "https://...",
-      "categoria": "dulce",
-      "id": 3
-    },
-    {
-      "nombreProducto": "Capuchino",
-      "precio": "600",
-      "imagen": "https://...",
-      "categoria": "bebida-caliente",
-      "id": 4
-    },
-    {
       "nombreProducto": "licuado de bnn",
       "precio": "500",
       "imagen": "https://ordr.issou.best/",
@@ -36,18 +15,18 @@
       "id": 5
     },
     {
-      "nombreProducto": "Galletas",
-      "precio": "220",
-      "imagen": "https://ordr.issou.best/",
-      "categoria": "salado",
-      "id": 6
-    },
-    {
       "nombreProducto": "Te",
       "precio": "300",
       "imagen": "https://ordr.issou.best/",
       "categoria": "bebida-caliente",
       "id": 7
+    },
+    {
+      "nombreProducto": "Galletas",
+      "precio": "200",
+      "imagen": "https://www.youtube.com/watch?v=GD_rycSTIkE&list=WL&index=40",
+      "categoria": "salado",
+      "id": 8
     }
   ]
 }
