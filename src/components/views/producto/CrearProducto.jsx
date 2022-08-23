@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import Alert from 'react-bootstrap/Alert';
 import { cantidadCaracteres, validarPrecio, validarImagen } from './helpers';
+import Swal from 'sweetalert2';
 
 
 const CrearProducto = () => {
@@ -10,20 +12,60 @@ const CrearProducto = () => {
     const [precio, setPrecio] = useState(0);
     const [imagen, setImagen] = useState("");
     const [categoria, setCategoria] = useState("");
+    const [msjError, setMsjError] = useState(false);
 
-    const handleSubmit = (e) => {
+    // Variable de entorno
+    const URL = process.env.REACT_APP_API_SERVER
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         // Validar los datos
-        if (cantidadCaracteres(nombreProducto) && validarPrecio(precio) && validarImagen(imagen)) {
-            console.log("los datos son correctos crear el objero")
+        if (cantidadCaracteres(nombreProducto) && validarPrecio(precio)) {
+            console.log("los datos son correctos crear el objeto")
+            
+            // crear un objeto
+            const nuevoProducto = {
+                nombreProducto,
+                precio,
+                imagen: imagen,
+                categoria: categoria
+            }
+
+            try{
+                //Envio la peticion del objeto al API
+                const respuesta = await fetch(URL, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type":"application/json"
+                    },
+                    body: JSON.stringify(nuevoProducto)
+                })
+
+                if (respuesta.status === 201) {
+                    // Mensaje que todo salio bien
+
+                    Swal.fire(
+                        'Producto creado!',
+                        'El producto fue agregado correctamente',
+                        'success'
+                    )
+                }
+
+                console.log(respuesta)
+            }catch(error){
+                console.log(error)
+                //Mostrar un mensaje al usuario
+            }
+
+            // Enviar peticion a Json-Server (API) create
+
+            setMsjError(false);
         }else{
-            console.log("cargar bien los datos correctamente")
+            console.log("Datos Erroneos")
+            setMsjError(true);
         }
 
-        // crear un objeto
-
-        // Enviar peticion a Json-Server (API) create
     }
 
     return (
@@ -62,6 +104,14 @@ const CrearProducto = () => {
                     Submit
                 </Button>
             </Form>
+
+            {
+                (msjError === true) ? ( <Alert variant="danger" className="mt-4">
+                    Debe corregir los datos.
+                </Alert>): null
+            }
+
+
         </section>
     );
 };

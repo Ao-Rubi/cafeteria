@@ -1,6 +1,6 @@
 export function cantidadCaracteres(input) {
     
-    if (input.lenght >= 2 && input.lenght<= 20) {
+    if (input.length >= 2 && input.length <= 20) {
 
         return true; //Dato correcto
     }else{
