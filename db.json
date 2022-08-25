@@ -1,13 +1,6 @@
 {
   "productos": [
     {
-      "nombreProducto": "Cafe",
-      "precio": "400",
-      "imagen": "https://...",
-      "categoria": "bebida-caliente",
-      "id": 1
-    },
-    {
       "nombreProducto": "licuado de bnn",
       "precio": "500",
       "imagen": "https://ordr.issou.best/",
@@ -27,6 +20,13 @@
       "imagen": "https://www.youtube.com/watch?v=GD_rycSTIkE&list=WL&index=40",
       "categoria": "salado",
       "id": 8
+    },
+    {
+      "nombreProducto": "Cafe de verdad",
+      "precio": "500",
+      "imagen": "https://images.pexels.com/photos/4109850/pexels-photo-4109850.jpeg?cs=srgb&dl=pexels-polina-tankilevitch-4109850.jpg&fm=jpg",
+      "categoria": "bebida-caliente",
+      "id": 9
     }
   ]
 }
