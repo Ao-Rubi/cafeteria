@@ -1,23 +1,23 @@
 {
   "productos": [
     {
-      "nombreProducto": "licuado de bnn",
-      "precio": "500",
+      "nombreProducto": "licuado de banana",
       "imagen": "https://ordr.issou.best/",
+      "precio": "500",
       "categoria": "bebida-fria",
       "id": 5
     },
     {
       "nombreProducto": "Te",
-      "precio": "300",
       "imagen": "https://ordr.issou.best/",
+      "precio": "320",
       "categoria": "bebida-caliente",
       "id": 7
     },
     {
       "nombreProducto": "Galletas",
-      "precio": "200",
       "imagen": "https://www.youtube.com/watch?v=GD_rycSTIkE&list=WL&index=40",
+      "precio": "120",
       "categoria": "salado",
       "id": 8
     },
