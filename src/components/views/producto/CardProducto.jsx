@@ -20,7 +20,7 @@ const CardProducto = ({producto}) => {
                     </Card.Text>
 
                     <div className='d-flex align-items-center'>
-                        <h6 className='pe-3'>${precio}</h6>
+                        <h6 className='display-6 pe-3'>${precio}</h6>
                         <Button variant="danger">Ver mas</Button>
                     </div>
 
