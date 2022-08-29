@@ -1,10 +1,10 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
+import {Link} from "react-router-dom"
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 
 const CardProducto = ({producto}) => {
-    const {imagen, nombreProducto, precio} = {...producto}
+    const {imagen, nombreProducto, precio, id} = {...producto}
 
     return (
         <Col xs={12} md={4} lg={3} className="mb-3">
@@ -21,7 +21,7 @@ const CardProducto = ({producto}) => {
 
                     <div className='d-flex align-items-center'>
                         <h6 className='display-6 pe-3'>${precio}</h6>
-                        <Button variant="danger">Ver mas</Button>
+                        <Link to={`/detalles/${id}`} className="btn btn-danger">Ver Mas</Link>
                     </div>
 
                 </Card.Body>
