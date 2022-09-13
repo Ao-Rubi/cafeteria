@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 
 const CardProducto = ({producto}) => {
-    const {imagen, nombreProducto, precio, id} = {...producto}
+    const {imagen, nombreProducto, precio, _id} = {...producto}
 
     return (
         <Col xs={12} md={4} lg={3} className="mb-3">
@@ -21,7 +21,7 @@ const CardProducto = ({producto}) => {
 
                     <div className='d-flex align-items-center'>
                         <h6 className='display-6 pe-3'>${precio}</h6>
-                        <Link to={`/detalles/${id}`} className="btn btn-danger">Ver Mas</Link>
+                        <Link to={`/detalles/${_id}`} className="btn btn-danger">Ver Mas</Link>
                     </div>
 
                 </Card.Body>

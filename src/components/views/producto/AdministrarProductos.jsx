@@ -51,7 +51,7 @@ const AdministrarProductos = () => {
 
                 <tbody>
                     {
-                        productos.map((producto) => <ItemProducto key={producto.id} producto={producto} consultarAPI={consultarAPI}></ItemProducto>)
+                        productos.map((producto) => <ItemProducto key={producto._id} producto={producto} consultarAPI={consultarAPI}></ItemProducto>)
                     }
                 </tbody>
 

@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 import { Link } from 'react-router-dom';
 
 const ItemProducto = ({producto, consultarAPI}) => {
-    const {nombreProducto, id, categoria, imagen, precio} = {...producto}
+    const {nombreProducto, _id, categoria, imagen, precio} = {...producto}
     const URL = process.env.REACT_APP_API_SERVER;
 
     const handleDelete = ()=> {
@@ -26,7 +26,7 @@ const ItemProducto = ({producto, consultarAPI}) => {
                     const parametro = {
                         method: "DELETE"
                     }
-                    const respuesta = await fetch(URL + "/" + id, parametro);
+                    const respuesta = await fetch(URL + "/" + _id, parametro);
                     console.log(respuesta)
 
                     if (respuesta.status === 200) {
@@ -50,13 +50,13 @@ const ItemProducto = ({producto, consultarAPI}) => {
 
     return (
             <tr>
-                <td>{id}</td>
+                <td>{_id}</td>
                 <td>{nombreProducto}</td>
                 <td>${precio}</td>
                 <td className='truncate'>{imagen}</td>
                 <td>{categoria}</td>
                 <td>
-                    <Link className='btn btn-warning' to={`/administrar/editar/${id}`}>Editar</Link>
+                    <Link className='btn btn-warning' to={`/administrar/editar/${_id}`}>Editar</Link>
                     <Button variant='danger' onClick={handleDelete}>Borrar</Button>
                 </td>
             </tr>
