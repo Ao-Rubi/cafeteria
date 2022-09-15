@@ -1,0 +1,32 @@
+{
+  "productos": [
+    {
+      "nombreProducto": "licuado de banana",
+      "imagen": "https://www.cakenknife.com/wp-content/uploads/2013/08/Bananamilkshake_2-682x1024.jpg",
+      "precio": "600",
+      "categoria": "bebida-fria",
+      "id": 5
+    },
+    {
+      "nombreProducto": "Te",
+      "imagen": "https://i0.wp.com/lisaeatsworld.com/wp-content/uploads/2013/11/dsc_1475.jpg?resize=1024%2C682&ssl=1",
+      "precio": "320",
+      "categoria": "bebida-caliente",
+      "id": 7
+    },
+    {
+      "nombreProducto": "Galletas",
+      "imagen": "https://i.pinimg.com/originals/91/b9/f2/91b9f21e2bfb78ba54cd56b47232da82.jpg",
+      "precio": "120",
+      "categoria": "salado",
+      "id": 8
+    },
+    {
+      "nombreProducto": "Cafe de verdad",
+      "precio": "500",
+      "imagen": "https://images.pexels.com/photos/4109850/pexels-photo-4109850.jpeg?cs=srgb&dl=pexels-polina-tankilevitch-4109850.jpg&fm=jpg",
+      "categoria": "bebida-caliente",
+      "id": 9
+    }
+  ]
+}
